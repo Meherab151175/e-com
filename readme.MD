@@ -41,20 +41,39 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
 ## Development
 
-Start the development server:
+### Scripts
+
+Start development server with hot-reload:
 ```bash
-npm run dev
+npm run start:dev
 ```
 
-Build for production:
+Build the project:
 ```bash
 npm run build
 ```
 
 Start production server:
 ```bash
-npm start
+npm run start:prod
 ```
+
+### Dependencies
+
+Main dependencies:
+- express: Web framework
+- mongoose: MongoDB ODM
+- cloudinary: Cloud image storage
+- zod: Schema validation
+- multer: File upload handling
+- cookie-parser: Cookie parsing middleware
+- dotenv: Environment variables
+- http-status: HTTP status utility
+
+Dev dependencies:
+- typescript: TypeScript support
+- ts-node-dev: TypeScript development server
+- @types/*: TypeScript type definitions
 
 ## Database Schema
 
