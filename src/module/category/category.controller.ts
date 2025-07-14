@@ -1,4 +1,3 @@
-import { success } from "zod";
 import catchAsync from "../../utils/catchAsync";
 import Category from "./category.model";
 
@@ -6,7 +5,7 @@ export const createCategory = catchAsync(async (req, res) => {
   const { name } = req.body;
   if (!name) {
     return res.status(400).json({
-      status: "fail",
+      success: false,
       message: "Category name is required",
     });
   }

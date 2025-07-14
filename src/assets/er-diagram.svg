@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Category Table -->
+  <rect x="50" y="50" width="200" height="100" fill="#f0f0f0" stroke="#000" stroke-width="2"/>
+  <text x="150" y="80" text-anchor="middle" font-weight="bold">Category</text>
+  <line x1="50" y1="90" x2="250" y2="90" stroke="#000" stroke-width="1"/>
+  <text x="70" y="115">PK _id: string</text>
+  <text x="70" y="135">name: string</text>
+
+  <!-- Product Table -->
+  <rect x="450" y="50" width="200" height="220" fill="#f0f0f0" stroke="#000" stroke-width="2"/>
+  <text x="550" y="80" text-anchor="middle" font-weight="bold">Product</text>
+  <line x1="450" y1="90" x2="650" y2="90" stroke="#000" stroke-width="1"/>
+  <text x="470" y="115">PK _id: string</text>
+  <text x="470" y="135">name: string</text>
+  <text x="470" y="155">description: string</text>
+  <text x="470" y="175">price: number</text>
+  <text x="470" y="195">discount: number</text>
+  <text x="470" y="215">image: string</text>
+  <text x="470" y="235">status: string</text>
+  <text x="470" y="255">FK category: string</text>
+
+  <!-- Relationship Line -->
+  <line x1="250" y1="100" x2="450" y2="100" stroke="#000" stroke-width="2"/>
+  <circle cx="250" cy="100" r="5" fill="#000"/>
+  <text x="270" y="90">1</text>
+  <text x="420" y="90">*</text>
+</svg>

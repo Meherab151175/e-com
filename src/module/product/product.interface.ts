@@ -10,3 +10,9 @@ export interface IProduct {
   productCode?: string;
   category: Types.ObjectId;
 }
+
+export interface IQuery {
+  name?: string;
+  price?: number;
+  discount?: number;
+}

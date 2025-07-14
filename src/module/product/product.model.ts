@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { IProduct } from "./product.interface";
+import crypto from "crypto";
 
 const productSchema = new mongoose.Schema<IProduct>(
   {
@@ -69,16 +70,16 @@ productSchema.pre("save", function (next) {
       i = j;
     }
 
-    const finalSubstring = subs.join("");
+    const finalSubstring = subs.join("").trim();
     const start = startIndices[0];
     const end = start + subs[0].length - 1;
     const hash = crypto
       .createHash("sha1")
-      .update(this.name)
+      .update(this.name + Date.now().toString())
       .digest("hex")
       .slice(0, 8);
 
-    this.productCode = `${hash}-${start}${finalSubstring}${end}`;
+    this.productCode = `${hash}-${start}-${finalSubstring}-${end}`;
   }
   next();
 });
